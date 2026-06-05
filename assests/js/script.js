@@ -42,7 +42,7 @@ document.addEventListener('visibilitychange',
 function(){
     if(document.visibilityState === "visible"){
         document.title = "Portfolio | Dhruv Shah";
-        $("#favicon").attr("href","assests/images/favicon.png");
+        $("#favicon").attr("href","assests/images/favicon-ds.svg");
     }
     else {
         document.title = "Come Back To Portfolio";
@@ -53,7 +53,7 @@ function(){
 
 // <!-- typed js effect starts -->
     var typed = new Typed(".typing-text", {
-        strings: ["Full-Stack development", "Cloud Computing", "system administrator"],
+        strings: ["Full-Stack Development", "Backend Engineering", "Cloud & DevOps", "Machine Learning"],
         loop: true,
         typeSpeed: 50,
 		backSpeed: 25,
@@ -69,17 +69,6 @@ function(){
 
 
 
-// Start of Tawk.to Live Chat
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/65d4f0f79131ed19d96f1745/1hn3sqhqp';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  })();
-// End of Tawk.to Live Chat
 
  // <!-- emailjs to mail contact form data -->
  $("#contact-form").submit(function (event) {
@@ -106,9 +95,9 @@ var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 /* ===== SCROLL REVEAL ANIMATION ===== */
 const srtop = ScrollReveal({
     origin: 'top',
-    distance: '80px',
-    duration: 1000,
-    reset: true
+    distance: '30px',
+    duration: 800,
+    reset: false
 });
 
 

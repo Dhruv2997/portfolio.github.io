@@ -1,120 +1,158 @@
 [
     {
-        "name": "ExpressJS",
-        "icon": "https://img.icons8.com/fluency/48/000000/node-js.png"
+        "name": "Next.js",
+        "icon": "https://cdn.simpleicons.org/nextdotjs/000000"
     },
     {
-        "name": "NodeJS",
-        "icon": "https://img.icons8.com/color/48/000000/nodejs.png"
+        "name": "React",
+        "icon": "https://img.icons8.com/color/48/react-native.png"
     },
     {
-        "name": "Redux",
-        "icon": "https://img.icons8.com/color/48/000000/redux.png"
+        "name": "TypeScript",
+        "icon": "https://img.icons8.com/color/48/typescript.png"
     },
     {
-        "name": "Firebase",
-        "icon": "https://img.icons8.com/color/48/000000/firebase.png"
+        "name": "Supabase",
+        "icon": "https://cdn.simpleicons.org/supabase"
     },
     {
-        "name": "Android",
-        "icon": "https://img.icons8.com/fluency/48/000000/android-os.png"
+        "name": "PostgreSQL",
+        "icon": "https://img.icons8.com/color/48/postgreesql.png"
     },
     {
-        "name": "MaterialUI",
-        "icon": "https://img.icons8.com/color/48/000000/material-ui.png"
+        "name": "FastAPI",
+        "icon": "https://cdn.simpleicons.org/fastapi"
     },
     {
-        "name": "DSA",
-        "icon": "https://img.icons8.com/color/48/000000/code.png"
-    },
-    
-    {
-        "name": "Google Cloud Platform",
-        "icon": "https://img.icons8.com/color/48/000000/google-cloud-platform.png"
+        "name": "OpenAI",
+        "icon": "https://img.icons8.com/color/48/chatgpt.png"
     },
     {
-        "name": "Bootstrap",
-        "icon": "https://img.icons8.com/color/48/000000/bootstrap.png"
-    },
-    {
-        "name": "MongoDB",
-        "icon": "https://img.icons8.com/color/48/000000/mongodb.png"
-    },
-    {
-        "name": "HTML5",
-        "icon": "https://img.icons8.com/color/48/000000/html-5--v1.png"
-    },
-    {
-        "name": "CSS3",
-        "icon": "https://img.icons8.com/color/48/000000/css3.png"
-    },
-    {
-        "name": "JavaScript",
-        "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png"
-    },
-    {
-        "name": "Java",
-        "icon": "https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png"
-    },
-    {
-        "name": "Kotlin",
-        "icon": "https://img.icons8.com/color/48/000000/kotlin.png"
+        "name": "Laravel",
+        "icon": "https://img.icons8.com/fluency/48/laravel.png"
     },
     {
         "name": "PHP",
         "icon": "https://img.icons8.com/offices/48/000000/php-logo.png"
     },
     {
-        "name": "Python",
-        "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
+        "name": "Prisma",
+        "icon": "https://cdn.simpleicons.org/prisma/000000"
     },
     {
-        "name": "Jupyter Notebook",
-        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/48px-Jupyter_logo.svg.png"
+        "name": "Angular",
+        "icon": "https://img.icons8.com/color/48/angularjs.png"
     },
-    
+    {
+        "name": "Vue.js",
+        "icon": "https://img.icons8.com/color/48/vue-js.png"
+    },
+    {
+        "name": "Django",
+        "icon": "https://cdn.simpleicons.org/django/092E20"
+    },
+    {
+        "name": "NodeJS",
+        "icon": "https://img.icons8.com/color/48/nodejs.png"
+    },
+    {
+        "name": "ExpressJS",
+        "icon": "https://cdn.simpleicons.org/express/000000"
+    },
+    {
+        "name": "SQL Server",
+        "icon": "https://img.icons8.com/color/48/microsoft-sql-server.png"
+    },
     {
         "name": "MySQL",
-        "icon": "https://img.icons8.com/color/48/000000/mysql-logo.png"
+        "icon": "https://img.icons8.com/color/48/mysql-logo.png"
     },
     {
-        "name": "Android Studio",
-        "icon": "https://img.icons8.com/color/48/000000/android-studio.png"
+        "name": "MongoDB",
+        "icon": "https://img.icons8.com/color/48/mongodb.png"
     },
     {
-        "name": "C++",
-        "icon": "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png"
+        "name": "Docker",
+        "icon": "https://img.icons8.com/color/48/docker.png"
     },
     {
-        "name": "C Language",
-        "icon": "https://img.icons8.com/color/48/000000/c.png"
+        "name": "AWS",
+        "icon": "https://img.icons8.com/color/48/amazon-web-services.png"
     },
     {
-        "name": "Heroku",
-        "icon": "https://img.icons8.com/color/48/000000/heroku.png"
+        "name": "Azure",
+        "icon": "https://img.icons8.com/fluency/48/azure-1.png"
     },
     {
-        "name": "Netlify",
-        "icon": "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/000000/external-netlify-a-cloud-computing-company-that-offers-hosting-and-serverless-backend-services-for-static-websites-logo-shadow-tal-revivo.png"
+        "name": "RabbitMQ",
+        "icon": "https://cdn.simpleicons.org/rabbitmq"
     },
     {
-        "name": "Flutter",
-        "icon": "https://img.icons8.com/ios-filled/48/0080FF/flutter.png"
+        "name": "GitHub Actions",
+        "icon": "https://cdn.simpleicons.org/githubactions"
     },
     {
-        "name": "jQuery",
-        "icon": "https://img.icons8.com/ios-filled/48/1169ae/jquery.png"
+        "name": "Redux",
+        "icon": "https://img.icons8.com/color/48/redux.png"
     },
     {
-        "name": "Git VCS",
-        "icon": "https://img.icons8.com/color/48/000000/git.png"
+        "name": "JavaScript",
+        "icon": "https://img.icons8.com/color/48/javascript--v1.png"
+    },
+    {
+        "name": "Python",
+        "icon": "https://img.icons8.com/color/48/python--v1.png"
+    },
+    {
+        "name": "Java",
+        "icon": "https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png"
+    },
+    {
+        "name": "HTML5",
+        "icon": "https://img.icons8.com/color/48/html-5--v1.png"
+    },
+    {
+        "name": "CSS3",
+        "icon": "https://img.icons8.com/color/48/css3.png"
+    },
+    {
+        "name": "Firebase",
+        "icon": "https://img.icons8.com/color/48/firebase.png"
+    },
+    {
+        "name": "Google Cloud",
+        "icon": "https://img.icons8.com/color/48/google-cloud-platform.png"
+    },
+    {
+        "name": "Bootstrap",
+        "icon": "https://img.icons8.com/color/48/bootstrap.png"
+    },
+    {
+        "name": "MaterialUI",
+        "icon": "https://img.icons8.com/color/48/material-ui.png"
+    },
+    {
+        "name": "Git",
+        "icon": "https://img.icons8.com/color/48/git.png"
     },
     {
         "name": "GitHub",
-        "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
+        "icon": "https://cdn.simpleicons.org/github/000000"
     },
     {
-        "name": "Team Work",
-        "icon": "https://img.icons8.com/color/48/000000/teamwork.png"
-    }    
+        "name": "Jupyter",
+        "icon": "https://cdn.simpleicons.org/jupyter"
+    },
+    {
+        "name": "C++",
+        "icon": "https://img.icons8.com/color/48/c-plus-plus-logo.png"
+    },
+    {
+        "name": "Kotlin",
+        "icon": "https://img.icons8.com/color/48/kotlin.png"
+    },
+    {
+        "name": "Flutter",
+        "icon": "https://cdn.simpleicons.org/flutter"
+    }
 ]

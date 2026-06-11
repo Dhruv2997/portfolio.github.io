@@ -1,169 +1,81 @@
-$(document).ready(function(){
+/* ============================================================
+   Dhruv Shah — Portfolio interactions
+   Vanilla JS, no dependencies. Subtle by design.
+   ============================================================ */
+(function () {
+  "use strict";
 
-    $('#menu').click(function(){
-        $(this).toggleClass('fa-times');
-        $('.navbar').toggleClass('nav-toggle');
-    });
+  const header = document.getElementById("site-header");
+  const menuBtn = document.getElementById("menu");
+  const nav = document.getElementById("nav");
+  const navLinks = Array.from(nav.querySelectorAll('a[href^="#"]'));
+  const sections = navLinks
+    .map((a) => document.querySelector(a.getAttribute("href")))
+    .filter(Boolean);
 
-    $(window).on('scroll load',function(){
-        $('#menu').removeClass('fa-times');
-        $('.navbar').removeClass('nav-toggle');
+  /* ---- Header shadow on scroll ---- */
+  const onScroll = () => {
+    header.classList.toggle("scrolled", window.scrollY > 10);
+  };
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
 
-        if(window.scrollY>60){
-            document.querySelector('#scroll-top').classList.add('active');
-        }else{
-            document.querySelector('#scroll-top').classList.remove('active');
-        }
+  /* ---- Mobile menu ---- */
+  const closeMenu = () => {
+    nav.classList.remove("open");
+    menuBtn.setAttribute("aria-expanded", "false");
+  };
+  menuBtn.addEventListener("click", () => {
+    const open = nav.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", String(open));
+  });
+  nav.addEventListener("click", (e) => {
+    if (e.target.tagName === "A") closeMenu();
+  });
+  document.addEventListener("click", (e) => {
+    if (!nav.contains(e.target) && !menuBtn.contains(e.target)) closeMenu();
+  });
 
-        // scroll spy
-        $('section').each(function(){
-            let height = $(this).height();
-            let offset = $(this).offset().top - 200;
-            let top = $(window).scrollTop();
-            let id = $(this).attr('id');
-
-            if(top>offset && top<offset+height){
-                $('.navbar ul li a').removeClass('active');
-                $('.navbar').find(`[href="#${id}"]`).addClass('active');
-            }
+  /* ---- Active nav link via IntersectionObserver ---- */
+  if (sections.length) {
+    const byId = (id) => navLinks.find((a) => a.getAttribute("href") === "#" + id);
+    const spy = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            navLinks.forEach((a) => a.classList.remove("active"));
+            const link = byId(entry.target.id);
+            if (link) link.classList.add("active");
+          }
         });
-    });
+      },
+      { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
+    );
+    sections.forEach((s) => spy.observe(s));
+  }
 
-    // smooth scrolling
-    $('a[href*="#"]').on('click',function(e){
-        e.preventDefault();
-        $('html, body').animate({
-            scrollTop : $($(this).attr('href')).offset().top,
-        },500, 'linear')
-    })
-});
-
-document.addEventListener('visibilitychange',
-function(){
-    if(document.visibilityState === "visible"){
-        document.title = "Portfolio | Dhruv Shah";
-        $("#favicon").attr("href","assests/images/favicon-ds.svg");
-    }
-    else {
-        document.title = "Come Back To Portfolio";
-        
-    }
-});
-
-
-// <!-- typed js effect starts -->
-    var typed = new Typed(".typing-text", {
-        strings: ["Full-Stack Development", "Backend Engineering", "Cloud & DevOps", "Machine Learning"],
-        loop: true,
-        typeSpeed: 50,
-		backSpeed: 25,
-		backDelay: 500,
-      });
-// <!-- typed js effect ends -->
-
-// <!-- tilt js effect starts -->
-      VanillaTilt.init(document.querySelectorAll(".tilt"), {
-        max: 15,
-      });
-// <!-- tilt js effect ends -->
-
-
-
-
- // <!-- emailjs to mail contact form data -->
- $("#contact-form").submit(function (event) {
-    //event.preventdefault();
-    
-    event.preventDefault();
-    emailjs.init("ppIGAwdgw5VSrcUsT");
-    console.log("form submitted");``
-    emailjs.sendForm('service_p254nfe', 'template_8kho13v', '#contact-form')
-        .then(function (response) {
-            console.log('SUCCESS!', response.status, response.text);
-            document.getElementById("contact-form").reset();
-            alert("Form Submitted Successfully");
-        }, function (error) {
-            console.log('FAILED...', error);
-            alert("Form Submission Failed! Try Again");
+  /* ---- Scroll reveal ---- */
+  const reveals = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    const ro = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            // small stagger for siblings entering together
+            entry.target.style.transitionDelay = Math.min(i * 60, 240) + "ms";
+            entry.target.classList.add("in");
+            obs.unobserve(entry.target);
+          }
         });
-    
-});
+      },
+      { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
+    );
+    reveals.forEach((el) => ro.observe(el));
+  } else {
+    reveals.forEach((el) => el.classList.add("in"));
+  }
 
-
-
-
-/* ===== SCROLL REVEAL ANIMATION ===== */
-const srtop = ScrollReveal({
-    origin: 'top',
-    distance: '30px',
-    duration: 800,
-    reset: false
-});
-
-
-
-async function fetchData(type = "skills") {
-    let response
-    // type === "skills" ?
-    //     response = await fetch("skills.json")
-    //     :
-    //     response = await fetch("./projects/projects.json")
-    response = await fetch("skills.json")
-    const data = await response.json();
-    return data;
-}
-
-function showSkills(skills) {
-    let skillsContainer = document.getElementById("skillsContainer");
-    let skillHTML = "";
-    skills.forEach(skill => {
-        skillHTML += `
-        <div class="bar">
-              <div class="info">
-                <img src=${skill.icon} alt="skill" />
-                <span>${skill.name}</span>
-              </div>
-            </div>`
-    });
-    skillsContainer.innerHTML = skillHTML;
-}
-
-fetchData().then(data => {
-    showSkills(data);
-});
-
-/* SCROLL HOME */
-srtop.reveal('.home .content h3',{delay: 200}); 
-srtop.reveal('.home .content p',{delay: 200}); 
-srtop.reveal('.home .content .btn',{delay: 200}); 
-
-srtop.reveal('.home .image',{delay: 400}); 
-srtop.reveal('.home .linkedin',{interval: 600}); 
-srtop.reveal('.home .github',{interval: 800}); 
-srtop.reveal('.home .twitter',{interval: 1000});
-srtop.reveal('.home .telegram',{interval: 600}); 
-srtop.reveal('.home .instagram',{interval: 600}); 
-
-
-
-/* SCROLL ABOUT */
-srtop.reveal('.about .content h3',{delay: 300});
-srtop.reveal('.about .content .tag',{delay: 400}); 
-srtop.reveal('.about .content p',{delay: 300}); 
-srtop.reveal('.about .content .box-container',{delay: 300}); 
-srtop.reveal('.about .content .resumebtn',{delay: 300}); 
-
-
-/* SCROLL EDUCATION */
-srtop.reveal('.education .box',{interval: 200}); 
-
-/* SCROLL PROJECTS */
-srtop.reveal('.work .box',{interval: 200}); 
-
-/* SCROLL EXPERIENCE */
-srtop.reveal('.experience .timeline',{delay: 400});
-srtop.reveal('.experience .timeline .container',{interval: 400}); 
-
-/* SCROLL CONTACT */
-srtop.reveal('.contact .container',{delay: 400});
-srtop.reveal('.contact .container .form-group',{delay: 400});
+  /* ---- Footer year ---- */
+  const year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
+})();

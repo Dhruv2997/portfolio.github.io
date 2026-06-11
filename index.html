@@ -1,484 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Dhruv Shah, portfolio Dhruv Shah, Data Scientist,Web Developer, portfolio website, Dhruv Shah website" />
-    <meta name="description" content="Welcome to Dhruv's Portfolio. Passionate Web & App Developer. Freelancer Data Scientist Machine Learning Ethusiast." />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./assests/css/style.css">
-    <!-- Inter font preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Favicon -->
-    <link id='favicon' rel="shortcut icon" href="./assests/images/favicon-ds.svg" type="image/svg+xml">
-    <title> Dhruv Shah </title>
-    
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("ppIGAwdgw5VSrcUsT");
-   })();
-</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Dhruv Shah — Senior Software Engineer</title>
+  <meta name="description" content="Dhruv Shah, Senior Software Engineer in Toronto building backend, platform, and AI systems. Co-founder of AD Tech AI and creator of IRIS, an AI employee for e-commerce customer support." />
+  <meta name="keywords" content="Dhruv Shah, Senior Software Engineer, Backend Engineer, Platform Engineer, AI Engineer, AD Tech AI, IRIS, Toronto" />
+  <meta name="author" content="Dhruv Shah" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Dhruv Shah — Senior Software Engineer" />
+  <meta property="og:description" content="Backend & AI engineer in Toronto. Co-founder of AD Tech AI, building IRIS, an AI employee for e-commerce customer support." />
+  <meta property="og:image" content="./assests/images/imagedhruv.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="./assests/images/favicon-ds.svg" type="image/svg+xml" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./assests/css/style.css" />
 </head>
-<body oncontextmenu="return false">
+<body>
 
-
-<!-- navbar starts -->
-<header>
-        <a class="logo">Dhruv</a>
-
-        <div id="menu" class="fas fa-bars"></div>
-        <nav class="navbar">
-            <ul>
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#work">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-</header>
-<!-- navbar ends -->
-
-
-
-
-<!-- hero section starts -->
-<section class="home" id="home">
-    <div id="particles-js"></div>
-
-    <div class="content">
-    <h3><br/> Dhruv <span>Shah</span></h3>
-    <p>i am into <span class="typing-text"></span></p>
+  <!-- ===== Header ===== -->
+  <header id="site-header">
+    <a href="#home" class="brand">
+      <span class="dot"></span>dhruv<span class="muted">.shah()</span>
     </a>
-    <div class="socials">
-        <ul class="social-icons">
-          <li><a class="linkedin" href="https://www.linkedin.com/in/dhruvshah2912/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-          <li><a class="github" href="https://github.com/Dhruv2997" target="_blank"><i class="fab fa-github"></i></a></li>
-          <li><a class="gmail" href="mailto:dhruvshah2997d@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a></li>
-        </ul>
-      </div>
-    </div>
-<div class="image">
-    <img draggable="false" class="tilt" src="./assests/images/imagedhruv.jpg" alt="">
-</div>
-</section>
-<!-- hero section ends -->
+    <button id="menu" aria-label="Toggle menu" aria-expanded="false">≡</button>
+    <nav id="nav">
+      <ul>
+        <li><a href="#home" class="active">home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#work">work</a></li>
+        <li><a href="#experience">experience</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#contact">contact</a></li>
+        <li><a href="./resume.html" class="nav-cta" target="_blank">resume ↗</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="home">
+    <div class="wrap">
+      <span class="hero-status reveal"><span class="live"></span> Open to senior backend / platform roles</span>
 
-<!-- about section starts -->
-<section class="about" id="about">
-    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
-    
-    <div class="row">
+      <h1 class="reveal">
+        Dhruv Shah,<br />
+        I build the <span class="grad">backend &amp; AI systems</span><br />
+        that businesses run on.
+      </h1>
 
-    <div class="image">
-        <img draggable="false" class="tilt" src="./assests/images/imagedhruv.jpg" alt="">
-    </div>
-    <div class="content">
-        <h3>I'm Dhruv</h3>
-        <span class="tag">Senior Software Engineer &amp; Co-Founder · Building with AI</span>
-        <p>I'm a full-stack engineer with 6+ years of experience shipping production software across healthcare, logistics, and AI-powered SaaS. I currently work as a Senior Software Engineer at Bison Transport while co-founding AD Tech AI Inc., an AI customer support platform I'm building from the ground up.</p>
-        <p>My work spans backend architecture, cloud integrations, and AI workflows. I care about clean service boundaries, systems that scale, and products that actually solve problems. Outside of code, I'm deep in the world of multi-tenant SaaS, AI agents, and what the next generation of business tooling looks like.</p>
+      <p class="hero-lead reveal">
+        Senior Software Engineer with <span class="hl">6+ years</span> shipping production systems
+        across logistics, healthcare, and AI-powered SaaS. Currently engineering at
+        <span class="hl">Bison Transport</span> and co-founding <span class="hl">AD Tech AI</span>,
+        where I build <span class="hl">IRIS</span>, an AI "employee" that runs customer support
+        for e-commerce businesses end to end.
+      </p>
 
-        <div class="box-container">
-            <div class="box">
-              <p><span>Age: </span>28</p>
-              <p><span>Based: </span>Toronto, Canada</p>
-            </div>
-            <div class="box">
-              <p><span>Email: </span>dhruvshah2997d@gmail.com</p>
-              <p><span>Open to: </span>Collabs &amp; Contracts</p>
-            </div>
-        </div>
-        
-
-    </div>
-    </div>
-</section>
-<!-- about section ends -->
-<!-- skills section starts -->
-<section class="skills" id="skills">
-
-  <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
-
-  <div class="container">
-        <div class="row" id="skillsContainer">
-
-
-    </div>
-</div>
-</section>
-<!-- skills section ends -->
-
-
-<!-- education section starts -->
-<section class="education" id="education">
-
-  <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
-
-    <p class="qoute">Education is not the learning of facts, but the training of the mind to think.</p>
-
-    <div class="box-container">
-
-    <div class="box">
-      <div class="image">
-        <a href="https://itmbu.ac.in/">
-      <img draggable="false" src="./assests/images/educat/itmclg.png" alt="" style="width: 63%;">
-      </div>
-      <div class="content">
-      <h3>Bachelor of Engineering in Computer Engineering</h3>
-      <p> ITM (SLS) Baroda University</p>
-    </a>
-      <h4>2015-2019 | Completed</h4>
-      </div>
-    </div>
-
-</div>
-</section>
-<!-- education section ends -->
-
-
-<!-- work project section starts -->
-<section class="work" id="work">
-
-  <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
-
-  <div class="box-container">
-
-    
-
-
-    <div class="box tilt">
-      <img draggable="false" src="./assests/images/projects/mlpr.jpg" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>E-Mail Classification ML Model</h3>
-        </div>
-        <div class="desc">
-          <p>Classify emails as spam or not-spam on the basis of the message.[Naive Bayes, Numpy, Pandas and Sklearn]
- 
-          
-            
-            </p>
-          <div class="btns">
-            <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a> <!-- Live Link -->
-            <a href="#" class="btn" target="_blank"><i class="fas fa-code"></i> Code</a> <!-- Github Code Link -->
-          </div>
+      <div class="hero-actions reveal">
+        <a href="#work" class="btn btn-primary">View selected work →</a>
+        <a href="./resume.html" class="btn btn-ghost" target="_blank">Download resume</a>
+        <div class="hero-socials">
+          <a href="https://www.linkedin.com/in/dhruvshah2912/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          <a href="https://github.com/Dhruv2997" target="_blank" rel="noopener" aria-label="GitHub">gh</a>
+          <a href="mailto:dhruvshah2997d@gmail.com" aria-label="Email">@</a>
         </div>
       </div>
-    </div>
-    
-    
-    
-    
-    <div class="box tilt">
-      <img draggable="false" src="./assests/images/cmsoon.png" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>AD Tech AI — Customer Support Platform</h3>
-        </div>
-        <div class="desc">
-          <p>AI-powered multi-tenant customer support and business automation platform for SMBs. Built with Next.js, TypeScript, Prisma, PostgreSQL, Python, FastAPI, and OpenAI.</p>
-          <div class="btns">
-            <a href="https://adtechai.ca/" class="btn" target="_blank"><i class="fas fa-eye"></i> Visit</a>
-          </div>
-        </div>
+
+      <div class="hero-stats reveal">
+        <div class="stat"><div class="n">6<span>+</span></div><div class="l">years shipping</div></div>
+        <div class="stat"><div class="n">3<span>+</span></div><div class="l">industries</div></div>
+        <div class="stat"><div class="n">2</div><div class="l">roles in parallel</div></div>
+        <div class="stat"><div class="n">1</div><div class="l">startup co-founded</div></div>
       </div>
     </div>
-    
+  </section>
 
-    <div class="box tilt">
-      <img draggable="false" src="./assests/images/projects/Library.png" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>College Library Website</h3>
-        </div>
-        <div class="desc">
-          <p>This is a College Library Website in which you can keep a record of all the books you have issued. 
+  <!-- ===== About ===== -->
+  <section class="about" id="about">
+    <div class="wrap">
+      <p class="eyebrow"><span class="num">01</span> // about</p>
+      <div class="about-grid">
+        <div class="about-body reveal">
+          <h2 class="section-title">Engineer by trade, builder by instinct.</h2>
+          <p>
+            I'm a <span class="hl">full-stack engineer who leans backend</span>, the kind who's happiest
+            designing service boundaries, taming legacy systems, and wiring messy real-world integrations
+            into something dependable. Over six years I've shipped software in healthcare, logistics, and
+            AI-powered SaaS, and I care a lot about systems that stay correct under load.
           </p>
-          <div class="btns">
-            <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="#" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+          <p>
+            At <span class="hl">Bison Transport</span> I modernize legacy PHP/Laravel platforms that move
+            freight at scale, including auth migration to Microsoft Entra, Track &amp; Trace integrations,
+            observability, and the reliability work that keeps them running. On the side I co-founded
+            <span class="hl">AD Tech AI</span>, where I'm building <span class="hl">IRIS</span> from zero:
+            an AI "employee" that handles e-commerce customer support end to end (orders, refunds,
+            OTP-verified lookups, and escalations) and already resolves the majority of conversations on its own.
+          </p>
+          <p>
+            I like the seam where pragmatic engineering meets product thinking, with clean architecture when
+            it matters, startup speed when it counts, and AI used where it genuinely earns its place.
+          </p>
+        </div>
+
+        <aside class="about-card reveal">
+          <div class="photo">
+            <img src="./assests/images/imagedhruv.jpg" alt="Dhruv Shah" />
+          </div>
+          <div class="about-meta">
+            <div class="row"><span class="k">location</span><span class="v">Toronto, Canada</span></div>
+            <div class="row"><span class="k">focus</span><span class="v">Backend · Platform · AI</span></div>
+            <div class="row"><span class="k">currently</span><span class="v">Bison · AD Tech AI</span></div>
+            <div class="row"><span class="k">status</span><span class="v"><span class="ok">● open to roles</span></span></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Selected Work ===== -->
+  <section class="work" id="work">
+    <div class="wrap">
+      <p class="eyebrow"><span class="num">02</span> // selected work</p>
+      <h2 class="section-title reveal">Things I've built that I'm proud of.</h2>
+      <p class="section-intro reveal" style="margin-bottom:2.6rem">
+        A few systems where the hard part wasn't the framework, it was the integrations, the edge cases,
+        and the reliability.
+      </p>
+
+      <div class="work-list">
+
+        <!-- ── IRIS (flagship) ── -->
+        <article class="case reveal">
+          <div class="case-num">01</div>
+          <div class="case-body">
+            <span class="case-flag"><span class="badge">Flagship</span> · AD Tech AI</span>
+            <h3>IRIS, an AI "employee" for e-commerce support</h3>
+            <span class="role">Co-Founder &amp; Technical Lead · architecture · AI workflows · full stack</span>
+            <p>
+              IRIS is an AI employee that runs customer support for small e-commerce businesses 24/7, with
+              no salary and no sick days. It handles order status, refunds, invoices, product availability,
+              new orders, and pickup/delivery, gating sensitive data behind OTP verification. Under the hood
+              it chains <span class="hl" style="color:var(--text)">intent detection → identity verification →
+              tenant-scoped database lookups → respond or escalate</span>, and ships as either a hosted
+              support page or an embeddable widget over one multi-tenant backend. Owners get a live
+              dashboard plus a natural-language "ask your business" assistant for orders, conversations,
+              and low-stock alerts.
+            </p>
+            <div class="case-metrics">
+              <div class="m"><div class="n"><span>78%</span></div><div class="l">conversations auto-resolved</div></div>
+              <div class="m"><div class="n">24/7</div><div class="l">always on, no downtime</div></div>
+              <div class="m"><div class="n">from&nbsp;$199<span>/mo</span></div><div class="l">vs $2.5k+ to hire</div></div>
+            </div>
+            <div class="stack">
+              <span>Next.js</span><span>TypeScript</span><span>Prisma</span><span>PostgreSQL</span>
+              <span>Supabase</span><span>Python</span><span>FastAPI</span><span>OpenAI</span>
+              <span>Auth0</span><span>Docker</span>
+            </div>
+          </div>
+          <div class="case-links">
+            <a class="case-link" href="https://adtechai.ca/iris" target="_blank" rel="noopener">IRIS ↗</a>
+            <a class="case-link" href="https://adtechai.ca/" target="_blank" rel="noopener">company ↗</a>
+          </div>
+        </article>
+
+        <!-- ── Bison Track & Trace ── -->
+        <article class="case reveal">
+          <div class="case-num">02</div>
+          <div class="case-body">
+            <span class="case-flag">Bison Transport</span>
+            <h3>Logistics platform: auth, observability &amp; integrations</h3>
+            <span class="role">Senior Software Engineer · platform, authentication, backend</span>
+            <p>
+              Driving platform and reliability work across Bison's logistics systems. I'm migrating
+              authentication off hard-coded, table-managed roles onto Microsoft Entra together with the
+              infrastructure team (app registrations, policies, employee SSO and MFA), and implemented
+              Auth0 in a production app. I set up Datadog observability from scratch, am standing up a
+              Gravitee API gateway for traffic visibility and per-team API keys, and rebuilt email on
+              SendGrid. Alongside that, I modernized legacy PHP/Laravel services and hardened Track &amp;
+              Trace integrations with Highway over SQL Server, RabbitMQ, SQS, and Azure.
+            </p>
+            <div class="case-metrics">
+              <div class="m"><div class="n">Entra<span> SSO</span></div><div class="l">auth migration + MFA</div></div>
+              <div class="m"><div class="n">Datadog</div><div class="l">observability from scratch</div></div>
+              <div class="m"><div class="n">API<span> gateway</span></div><div class="l">visibility + per-team keys</div></div>
+            </div>
+            <div class="stack">
+              <span>Microsoft Entra</span><span>Auth0</span><span>Gravitee</span><span>Datadog</span><span>SendGrid</span>
+              <span>PHP</span><span>Laravel</span><span>SQL Server</span><span>RabbitMQ</span><span>SQS</span><span>Azure</span>
+            </div>
+          </div>
+          <div class="case-links">
+            <span class="case-link" style="opacity:.6;cursor:default">internal</span>
+          </div>
+        </article>
+
+        <!-- ── CareChain ── -->
+        <article class="case reveal">
+          <div class="case-num">03</div>
+          <div class="case-body">
+            <span class="case-flag">CareChain</span>
+            <h3>Healthcare platform, full-stack delivery</h3>
+            <span class="role">Full-Stack Developer · React, Django, data flows</span>
+            <p>
+              Built and shipped modules for a live healthcare product: React frontends with Redux-Saga for
+              robust async flows, and Django REST APIs over MySQL for reliable storage and retrieval.
+              Focused on clean frontend↔backend contracts and maintainable, well-structured code.
+            </p>
+            <div class="case-metrics">
+              <div class="m"><div class="n">Live</div><div class="l">production healthcare app</div></div>
+              <div class="m"><div class="n">REST</div><div class="l">clean API contracts</div></div>
+            </div>
+            <div class="stack">
+              <span>React</span><span>Redux-Saga</span><span>Django</span><span>MySQL</span><span>REST</span>
+            </div>
+          </div>
+          <div class="case-links">
+            <span class="case-link" style="opacity:.6;cursor:default">healthcare</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Experience ===== -->
+  <section class="experience" id="experience">
+    <div class="wrap">
+      <p class="eyebrow"><span class="num">03</span> // experience</p>
+      <h2 class="section-title reveal">Where I've done the work.</h2>
+
+      <div class="timeline">
+
+        <div class="exp reveal">
+          <div class="exp-when">Jan 2026 – <span class="now">present</span></div>
+          <div class="exp-detail">
+            <div class="exp-head"><h3>AD Tech AI Inc. <span class="at">· Co-Founder / Technical Lead</span></h3></div>
+            <p class="exp-role">Building IRIS, an AI employee for e-commerce support</p>
+            <ul>
+              <li>Co-founded an AI startup and architected IRIS, an AI "employee" that autonomously handles e-commerce customer support, now resolving ~78% of conversations without a human.</li>
+              <li>Designed the core architecture: Next.js + TypeScript app, Prisma/PostgreSQL data layer, and Python AI services running an intent-detection → verification → lookup → respond/escalate pipeline.</li>
+              <li>Built a multi-tenant backend serving two entry points from one codebase: a hosted support page and an embeddable chat widget, each scoped to its business's data.</li>
+              <li>Shipped customer flows for order status, refunds, invoices, product availability, and new orders, gating sensitive data behind OTP identity verification.</li>
+              <li>Built an owner dashboard plus a natural-language "ask your business" assistant surfacing orders, conversations, and low-stock alerts.</li>
+            </ul>
+            <div class="stack">
+              <span>Next.js</span><span>TypeScript</span><span>Prisma</span><span>PostgreSQL</span>
+              <span>Supabase</span><span>Auth0</span><span>Python</span><span>FastAPI</span><span>OpenAI</span><span>Docker</span>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    
 
-   
-    <div class="box tilt">
-      <img draggable="false" src="./assests/images/projects/CodeIN.jpg" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>CodeIN Community Website</h3>
-        </div>
-        <div class="desc">
-          <p>This is an Open Source Website for my Community CodeIN Community built using HTML, CSS, JavaScript and Bootstrap.</p>
-          <div class="btns">
-            <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="#" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+        <div class="exp reveal">
+          <div class="exp-when">Dec 2024 – <span class="now">present</span></div>
+          <div class="exp-detail">
+            <div class="exp-head"><h3>Bison Transport <span class="at">· Senior Software Engineer</span></h3></div>
+            <p class="exp-role">Platform, authentication, observability &amp; backend integrations</p>
+            <ul>
+              <li>Leading the migration of company-wide authentication and authorization off hard-coded, table-managed roles onto Microsoft Entra, partnering with the infrastructure team to define the app registrations and policies we need, and a safer, simpler employee login with MFA.</li>
+              <li>Implemented Auth0 in a production Bison application, modernizing its login and access flows.</li>
+              <li>Standing up Gravitee as an API gateway to give the org real visibility into API traffic and separate API keys per team, replacing a setup with no gateway and shared credentials.</li>
+              <li>Set up Datadog observability from scratch when I joined, monitoring queues, services, and integrations across the whole platform.</li>
+              <li>Rebuilding email infrastructure on SendGrid, moving off Microsoft Exchange for deliverability visibility, error handling, and clearer delivery tracking.</li>
+              <li>Modernized legacy PHP, Yii, Zend, and Laravel apps powering logistics and carrier workflows into smaller, testable services.</li>
+              <li>Designed backend services for high-volume integrations across SQL Server, RabbitMQ, SQS, and Azure Blob Storage, including hardened Track &amp; Trace integrations with Highway (eligibility rules, carrier validation, status sync, retries, and safeguards).</li>
+              <li>Built employee/user sync via Paycom, Workday, and RBAC, and advanced CI/CD with Docker, GitHub Actions, GHCR, and Portainer.</li>
+            </ul>
+            <div class="stack">
+              <span>Microsoft Entra</span><span>Auth0</span><span>Gravitee</span><span>Datadog</span><span>SendGrid</span>
+              <span>PHP</span><span>Laravel</span><span>SQL Server</span><span>RabbitMQ</span><span>SQS</span><span>Azure</span><span>Docker</span>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    
 
-    <div class="box tilt">
-      <img draggable="false" src="./assests/images/projects/Netflix.PNG" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>Netflix Clone | React-App</h3>
-        </div>
-        <div class="desc">
-          <p>Netflix clone App built with React and Redux. The objective of this project is to practising the concepts of 'React-Hooks', 'Redux-Hooks', react-router, redux-setup.</p>
-          <div class="btns">
-            <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="#" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+        <div class="exp reveal">
+          <div class="exp-when">Mar 2022 – Jul 2022</div>
+          <div class="exp-detail">
+            <div class="exp-head"><h3>CareChain <span class="at">· Full-Stack Developer</span></h3></div>
+            <p class="exp-role">Live healthcare product</p>
+            <ul>
+              <li>Built modules for a live healthcare app with React, Django, and MySQL, ensuring reliable data storage and retrieval.</li>
+              <li>Used Redux-Saga to manage async operations cleanly, improving responsiveness.</li>
+              <li>Architected and integrated Django REST APIs for smooth frontend↔backend communication.</li>
+            </ul>
+            <div class="stack"><span>React</span><span>Redux-Saga</span><span>Django</span><span>MySQL</span><span>REST</span></div>
           </div>
         </div>
-      </div>
-    </div>  
-    
-    
-    
 
-<div class="viewall">
-  <a href="#" class="btn"><span>View All</span> <!-- All Project Link -->
-    <i class="fas fa-arrow-right"></i>
-</a>
-</div>
-
-</section>
-<!-- work project section ends -->
-
-<!-- experience section starts -->
-<section class="experience" id="experience">
-
-  <h2 class="heading"><i class="fas fa-briefcase"></i> Experience </h2>
-
-  <div class="exp-list">
-
-    <div class="exp-item exp-founder">
-      <div class="exp-header">
-        <div class="exp-top">
-          <h2 class="exp-company">AD Tech AI Inc.</h2>
-          <span class="exp-badge badge-founder">Founder</span>
-          <span class="exp-badge badge-current">Current</span>
-        </div>
-        <div class="exp-sub">
-          <span class="exp-role">Co-Founder / Technical Lead</span>
-          <span class="exp-date"><i class="fas fa-calendar-alt"></i> Jan 2026 – Present</span>
-        </div>
-      </div>
-      <ul class="exp-bullets">
-        <li>Co-founded and led development of a multi-tenant AI customer support platform to help businesses automate customer conversations, order support, product questions, and operational workflows.</li>
-        <li>Designed the core platform architecture using Next.js, TypeScript, Prisma, PostgreSQL/Supabase, Python services, and AI-powered workflow orchestration.</li>
-        <li>Built tenant-based support experiences where each business can have its own branded hosted page, chatbot, knowledge base, policies, order data, and staff dashboard.</li>
-        <li>Developed customer-facing AI chat flows for order status, order placement, product questions, delivery/pickup selection, OTP verification, fulfillment rules, and escalation scenarios.</li>
-        <li>Designed secure auth boundaries using Auth0 for staff/admin login and OTP-based verification for customer actions.</li>
-        <li>Built owner/admin dashboard with KPIs, recent orders, customer conversations, low-stock alerts, inventory insights, and AI-powered business summaries.</li>
-        <li>Created a clean service boundary between the main web app and Python AI services, keeping business logic in-app while using AI for language reasoning and address intelligence.</li>
-        <li>Balanced startup speed with production-minded practices: tenant isolation, typed data models, reusable service layers, and secure customer verification.</li>
-      </ul>
-      <div class="exp-tags">
-        <span>Next.js</span><span>TypeScript</span><span>Prisma</span><span>PostgreSQL</span>
-        <span>Supabase</span><span>Auth0</span><span>Python</span><span>FastAPI</span>
-        <span>OpenAI</span><span>Docker</span><span>SaaS</span>
-      </div>
-    </div>
-
-    <div class="exp-item exp-current">
-      <div class="exp-header">
-        <div class="exp-top">
-          <h2 class="exp-company">Bison Transport</h2>
-          <span class="exp-badge badge-current">Current</span>
-        </div>
-        <div class="exp-sub">
-          <span class="exp-role">Senior Software Engineer</span>
-          <span class="exp-date"><i class="fas fa-calendar-alt"></i> Dec 2024 – Present</span>
-        </div>
-      </div>
-      <ul class="exp-bullets">
-        <li>Led modernization of legacy PHP, Yii, Zend, and Laravel applications supporting logistics, carrier workflows, user access, notifications, and internal business processes.</li>
-        <li>Designed backend services for high-volume integrations involving SQL Server, RabbitMQ, Azure Blob Storage, SQS, SOAP APIs, REST APIs, and third-party logistics platforms.</li>
-        <li>Built and improved Track &amp; Trace integrations between Bison systems and Highway, including load eligibility rules, carrier validation, status sync, retries, and operational safeguards.</li>
-        <li>Developed employee/user sync workflows using Paycom, Workday, RBAC, and internal identity systems to support user lifecycle and access control.</li>
-        <li>Contributed to auth modernization proof-of-concepts using Auth0 and Microsoft Entra, including Universal Login, MFA, and local RBAC mapping.</li>
-        <li>Improved system reliability with structured logging, Sentry visibility, queue safeguards, retry handling, and clearer error tracking for production support.</li>
-        <li>Worked on CI/CD improvements using Docker, GitHub Actions, GHCR, Portainer, automated testing, and static analysis.</li>
-        <li>Refactored large legacy processes into smaller, testable Laravel services following modern practices: dependency injection, service boundaries, typed responses, and clear validation.</li>
-      </ul>
-      <div class="exp-tags">
-        <span>PHP</span><span>Laravel</span><span>Yii</span><span>Zend</span>
-        <span>SQL Server</span><span>RabbitMQ</span><span>SQS</span><span>Azure</span>
-        <span>Docker</span><span>GitHub Actions</span><span>Auth0</span><span>Sentry</span>
-      </div>
-    </div>
-
-    <div class="exp-item">
-      <div class="exp-header">
-        <div class="exp-top">
-          <h2 class="exp-company">CareChain App</h2>
-        </div>
-        <div class="exp-sub">
-          <span class="exp-role">Full-Stack Developer</span>
-          <span class="exp-date"><i class="fas fa-calendar-alt"></i> Mar 2022 – Jul 2022</span>
-        </div>
-      </div>
-      <ul class="exp-bullets">
-        <li>Developed and implemented modules for a live healthcare project using React, MySQL, and Django, ensuring seamless data storage and retrieval.</li>
-        <li>Utilized React Saga within the frontend architecture to manage asynchronous operations, enhancing responsiveness and efficiency.</li>
-        <li>Collaborated with team members to architect and integrate RESTful APIs using Django, enabling smooth frontend-backend communication.</li>
-        <li>Implemented best practices in React and Django development to optimize code efficiency and maintainability.</li>
-      </ul>
-      <div class="exp-tags">
-        <span>React</span><span>Django</span><span>MySQL</span><span>REST APIs</span><span>React Saga</span>
-      </div>
-    </div>
-
-    <div class="exp-item">
-      <div class="exp-header">
-        <div class="exp-top">
-          <h2 class="exp-company">Yantre Venture</h2>
-        </div>
-        <div class="exp-sub">
-          <span class="exp-role">Full Stack Developer</span>
-          <span class="exp-date"><i class="fas fa-calendar-alt"></i> Sep 2019 – Nov 2020</span>
-        </div>
-      </div>
-      <ul class="exp-bullets">
-        <li>Involved in all phases of SDLC including requirements, analysis, design, development, testing, and release across multiple projects.</li>
-        <li>Followed agile methodology with daily SCRUM, sprint planning, and JIRA tracking.</li>
-        <li>Designed dynamic, multi-browser compatible pages using HTML, CSS, JavaScript, Angular Material, TypeScript, and Angular 11.</li>
-        <li>Developed web applications using Vue.js framework and built REST controllers using Spring Data REST.</li>
-        <li>Implemented data layer using JPA/Hibernate as ORM for Oracle database queries.</li>
-      </ul>
-      <div class="exp-tags">
-        <span>Angular</span><span>Vue.js</span><span>TypeScript</span><span>Docker</span>
-        <span>Spring MVC</span><span>Java</span><span>Oracle DB</span>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-<!-- experience section ends -->
-
-<!-- contact section starts -->
-<section class="contact" id="contact">
-  
-  <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
-  <div class="container">
-    <div class="content">
-      <div class="image-box">
-        <img draggable="false" src="./assests/images/contact1.png" alt="">
-      </div>
-    <form id="contact-form">
-      
-      <div class="form-group">
-        <div class="field">
-          <input type="text" name="name" placeholder="Name" required>
-          <i class='fas fa-user'></i>
-        </div>
-        <div class="field">
-          <input type="text" name="email" placeholder="Email" required>
-          <i class='fas fa-envelope'></i>
-        </div>
-        <div class="field">
-          <input type="text" name="phone" placeholder="Phone">
-          <i class='fas fa-phone-alt'></i>
-        </div>
-        <div class="message">
-        <textarea placeholder="Message" name="message" required></textarea>
-        <i class="fas fa-comment-dots"></i>
-        </div>
-        </div>
-      <div class="button-area">
-        <button type="submit">
-          Submit <i class="fa fa-paper-plane"></i></button>
-      </div>
-    </form>
-  </div>
-  </div>
-</section>
-<!-- contact section ends -->
-
-
-<!-- footer section starts -->
-<section class="footer">
-
-  <div class="box-container">
-
-      <div class="box">
-          <h3>Dhruv's Portfolio</h3>
-          <p>Senior Software Engineer & Co-Founder based in Toronto. I build backend systems, AI-powered products, and full-stack applications that solve real problems. Always open to interesting conversations, collaborations, and new opportunities.</p>
-      </div>
-
-      <div class="box">
-          <h3>quick links</h3>
-          <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
-          <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
-          <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
-          <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
-          <a href="#work"><i class="fas fa-chevron-circle-right"></i> work</a>
-
-          <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
-      </div>
-
-      <div class="box">
-          <h3>contact info</h3>
-          
-          <p> <i class="fas fa-envelope"></i>dhruvshah2997d@gmail.com</p>
-          <p> <i class="fas fa-map-marked-alt"></i>Toronto, Canada</p>
-          <div class="share">
-
-              <a href="https://www.linkedin.com/in/dhruvshah2912/" class="fab fa-linkedin" target="_blank"></a>
-              <a href="https://github.com/Dhruv2997" class="fab fa-github" target="_blank"></a>
-              <a href="mailto:dhruvshah2997d@gmail.com" class="fas fa-envelope" target="_blank"></a>
+        <div class="exp reveal">
+          <div class="exp-when">Sep 2019 – Nov 2020</div>
+          <div class="exp-detail">
+            <div class="exp-head"><h3>Yantre Venture <span class="at">· Full-Stack Developer</span></h3></div>
+            <p class="exp-role">Multi-project agile delivery</p>
+            <ul>
+              <li>Worked across the full SDLC, from requirements and design to development, testing, and release, in an agile/SCRUM setup tracked in JIRA.</li>
+              <li>Built dynamic, cross-browser UIs with Angular 11, TypeScript, Angular Material, and Vue.js.</li>
+              <li>Developed REST controllers with Spring Data REST and a JPA/Hibernate data layer over Oracle DB.</li>
+            </ul>
+            <div class="stack"><span>Angular</span><span>Vue.js</span><span>TypeScript</span><span>Java</span><span>Spring</span><span>Oracle</span></div>
           </div>
+        </div>
+
       </div>
-  </div>
+    </div>
+  </section>
 
-  <h1 class="credit">Designed with by <a href="#"> Dhruv Shah</a></h1>
+  <!-- ===== Skills ===== -->
+  <section class="skills" id="skills">
+    <div class="wrap">
+      <p class="eyebrow"><span class="num">04</span> // toolkit</p>
+      <h2 class="section-title reveal">What I work with.</h2>
+      <p class="section-intro reveal" style="margin-bottom:2.4rem">
+        Pragmatic across the stack, with the most depth in backend services, integrations, and the
+        infrastructure around them.
+      </p>
 
-</section>
-<!-- footer section ends -->
+      <div class="skill-groups">
+        <div class="skill-card reveal">
+          <h4><span class="i">{ }</span> Backend</h4>
+          <ul><li>PHP</li><li>Laravel</li><li>Yii / Zend</li><li>Python</li><li>FastAPI</li><li>Django</li><li>Node.js</li><li>Java / Spring</li></ul>
+        </div>
+        <div class="skill-card reveal">
+          <h4><span class="i">&lt; &gt;</span> Frontend</h4>
+          <ul><li>Next.js</li><li>React</li><li>TypeScript</li><li>Redux</li><li>Angular</li><li>Vue.js</li></ul>
+        </div>
+        <div class="skill-card reveal">
+          <h4><span class="i">[ ]</span> Data &amp; Queues</h4>
+          <ul><li>PostgreSQL</li><li>SQL Server</li><li>MySQL</li><li>Prisma</li><li>Supabase</li><li>RabbitMQ</li><li>SQS</li><li>MongoDB</li></ul>
+        </div>
+        <div class="skill-card reveal">
+          <h4><span class="i">~/</span> Cloud, DevOps &amp; Observability</h4>
+          <ul><li>Docker</li><li>Azure</li><li>AWS</li><li>GitHub Actions</li><li>GHCR</li><li>Portainer</li><li>Datadog</li><li>Gravitee</li><li>SendGrid</li><li>Sentry</li></ul>
+        </div>
+        <div class="skill-card reveal">
+          <h4><span class="i">✦</span> AI &amp; Auth</h4>
+          <ul><li>OpenAI</li><li>LLM workflows</li><li>RAG / grounding</li><li>Auth0</li><li>Microsoft Entra</li><li>OTP / RBAC</li></ul>
+        </div>
+        <div class="skill-card reveal">
+          <h4><span class="i">⌘</span> Practices</h4>
+          <ul><li>System design</li><li>Multi-tenant SaaS</li><li>Service boundaries</li><li>CI/CD</li><li>Agile / SCRUM</li><li>Observability</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ===== Contact ===== -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="contact-inner reveal">
+        <p class="eyebrow" style="justify-content:center"><span class="num">05</span> // contact</p>
+        <h2 class="section-title">Let's build something dependable.</h2>
+        <p class="section-intro">
+          I'm open to senior backend &amp; platform roles, and always up for a good conversation about
+          systems, AI products, or startups. The fastest way to reach me is email.
+        </p>
+        <div class="contact-actions">
+          <a href="mailto:dhruvshah2997d@gmail.com" class="btn btn-primary">dhruvshah2997d@gmail.com</a>
+          <a href="https://www.linkedin.com/in/dhruvshah2912/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn ↗</a>
+          <a href="https://github.com/Dhruv2997" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- scroll top btn -->
-<a href="#home" class="fas fa-angle-up" id="scroll-top"></a>
-<!-- scroll back to top -->
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="footer-inner">
+      <p>© <span id="year"></span> Dhruv Shah · built from <span class="accent">scratch</span>, no template.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/dhruvshah2912/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a href="https://github.com/Dhruv2997" target="_blank" rel="noopener" aria-label="GitHub">gh</a>
+        <a href="mailto:dhruvshah2997d@gmail.com" aria-label="Email">@</a>
+      </div>
+    </div>
+  </footer>
 
-
-<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
-
-<!-- jquery cdn -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- typed.js cdn -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- particle.js links -->
-<script src="./assests/js/particles.min.js"></script>
-<script src="./assests/js/app.js"></script>
-
-<!-- vanilla tilt.js links -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- scroll reveal anim -->
-<script src="https://unpkg.com/scrollreveal"></script>
-<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
-
-<script src="./assests/js/script.js"></script>
-
+  <script src="./assests/js/script.js"></script>
 </body>
 </html>

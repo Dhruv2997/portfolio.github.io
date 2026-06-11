@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dhruv Shah — Resume</title>
+  <title>Dhruv Shah · Resume</title>
   <meta name="description" content="Resume of Dhruv Shah, Senior Software Engineer in backend, platform, and AI systems." />
   <link rel="icon" href="./assests/images/favicon-ds.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -100,7 +100,7 @@
   <div class="page">
     <header class="r-head">
       <div class="r-name">Dhruv Shah</div>
-      <div class="r-title">Senior Software Engineer · Backend · Platform · AI</div>
+      <div class="r-title">Senior Backend &amp; Platform Engineer</div>
       <div class="r-contact">
         <span>Toronto, Canada</span><span class="sep">|</span>
         <a href="mailto:dhruvshah2997d@gmail.com">dhruvshah2997d@gmail.com</a><span class="sep">|</span>
@@ -113,25 +113,26 @@
     <section class="r">
       <h2 class="r-h">Summary</h2>
       <p class="summary">
-        Senior Software Engineer with <b>6+ years</b> building and modernizing production backend systems
-        across logistics, healthcare, and AI-powered SaaS. Deep experience in service architecture,
-        high-volume integrations (message queues, SOAP/REST, cloud storage), and reliability engineering.
-        Currently driving platform, authentication, and observability work at Bison Transport (Microsoft
-        Entra migration, Datadog, API gateway) while co-founding AD Tech AI, where I architect IRIS, a
-        multi-tenant AI support platform that autonomously resolves ~78% of e-commerce customer conversations.
-        Comfortable owning systems end to end, from data model to deployment.
+        Senior Backend / Platform Engineer with <b>3+ years</b> of hands-on experience building and
+        modernizing production systems across logistics, healthcare, and AI SaaS. Strong in Laravel/PHP, SQL Server, RabbitMQ/SQS, cloud
+        integrations, authentication, and observability. Currently <b>leading platform work at Bison
+        Transport</b>, including a Microsoft Entra SSO/MFA migration, Datadog observability, a Gravitee
+        API-gateway rollout, a SendGrid email migration, and high-volume Track &amp; Trace integrations. Also
+        building <b>IRIS</b>, a multi-tenant AI support platform that autonomously resolves ~78% of e-commerce
+        conversations. I own systems end to end and partner with infrastructure, security, and product teams.
       </p>
     </section>
 
     <section class="r">
       <h2 class="r-h">Core Skills</h2>
       <dl class="skills">
-        <dt>Languages</dt><dd>PHP, TypeScript, JavaScript, Python, Java, SQL</dd>
-        <dt>Backend</dt><dd>Laravel, Yii, Zend, FastAPI, Django, Node.js, Spring</dd>
-        <dt>Frontend</dt><dd>Next.js, React, Redux, Angular, Vue.js</dd>
-        <dt>Data &amp; Queues</dt><dd>PostgreSQL, SQL Server, MySQL, Prisma, Supabase, RabbitMQ, SQS, MongoDB</dd>
-        <dt>Cloud &amp; DevOps</dt><dd>Docker, Azure, AWS, GitHub Actions, GHCR, Portainer, Datadog, Gravitee, SendGrid, Sentry</dd>
-        <dt>AI &amp; Auth</dt><dd>OpenAI / LLM workflows, RAG &amp; grounding, Auth0, Microsoft Entra SSO/MFA, OTP, RBAC</dd>
+        <dt>Languages</dt><dd>PHP, TypeScript, Python, JavaScript, SQL</dd>
+        <dt>Backend &amp; APIs</dt><dd>Laravel, Yii, FastAPI, Node.js, REST, SOAP</dd>
+        <dt>Data &amp; Messaging</dt><dd>SQL Server, PostgreSQL, MySQL, Prisma, RabbitMQ, SQS</dd>
+        <dt>Cloud &amp; DevOps</dt><dd>Docker, Azure, AWS, GitHub Actions, GHCR, Portainer</dd>
+        <dt>Observability &amp; Auth</dt><dd>Datadog, Sentry, Microsoft Entra (SSO/MFA), Auth0, Gravitee, RBAC</dd>
+        <dt>AI</dt><dd>OpenAI / LLM workflows, RAG &amp; grounding</dd>
+        <dt>Also</dt><dd>Next.js, React, Supabase, Django, SendGrid</dd>
       </dl>
     </section>
 
@@ -140,30 +141,29 @@
 
       <div class="job">
         <div class="job-top">
-          <div class="job-role">Co-Founder / Technical Lead <span class="job-co">· AD Tech AI Inc.</span></div>
-          <div class="job-meta">Jan 2026 – Present · Toronto</div>
+          <div class="job-role">Senior Software Engineer <span class="job-co">· Bison Transport</span></div>
+          <div class="job-meta">Dec 2024 – Present · Toronto</div>
         </div>
         <ul>
-          <li>Co-founded an AI SaaS startup and architected <b>IRIS</b>, an AI "employee" that autonomously handles e-commerce customer support, <b>resolving ~78% of conversations</b> without a human, 24/7.</li>
-          <li>Designed the system end to end: <b>Next.js + TypeScript</b> app, <b>Prisma/PostgreSQL</b> data layer, and <b>Python/FastAPI</b> AI services running an intent-detection → verification → lookup → respond/escalate pipeline.</li>
-          <li>Built a <b>multi-tenant backend</b> serving two entry points from one codebase, a hosted support page and an embeddable chat widget, each scoped to its business's data.</li>
-          <li>Shipped customer flows for order status, refunds, invoices, product availability, and new orders, gating sensitive data behind <b>OTP identity verification</b>.</li>
-          <li>Built an owner dashboard and a natural-language "ask your business" assistant surfacing orders, conversations, and low-stock alerts.</li>
+          <li><b>Leading the Microsoft Entra SSO/MFA migration</b> for logistics applications, replacing hard-coded, table-managed authentication with proper app registrations, RBAC mapping, and a rollout plan defined with the infrastructure and security teams, strengthening security posture and simplifying employee login.</li>
+          <li>Built <b>Datadog observability from scratch</b> across queue workers and external integrations, cutting blind spots on failed jobs and API errors and speeding incident triage.</li>
+          <li>Standing up a <b>Gravitee API gateway</b> to give the org traffic visibility and per-team API keys, replacing a setup with no gateway and shared credentials.</li>
+          <li>Built and hardened high-volume <b>Track &amp; Trace</b> integrations with Highway over SQL Server, RabbitMQ, and SQS, covering eligibility validation, carrier rules, status sync, retries, and operational safeguards.</li>
+          <li>Implemented <b>Auth0</b> in a production application and migrated transactional email from Microsoft Exchange to <b>SendGrid</b>, gaining deliverability visibility and error handling.</li>
+          <li>Modernized legacy <b>PHP, Yii, Zend, and Laravel</b> services into smaller, testable modules; built employee/user sync via Paycom, Workday, and RBAC, and advanced CI/CD with Docker, GitHub Actions, GHCR, and Portainer.</li>
         </ul>
       </div>
 
       <div class="job">
         <div class="job-top">
-          <div class="job-role">Senior Software Engineer <span class="job-co">· Bison Transport</span></div>
-          <div class="job-meta">Dec 2024 – Present · Toronto</div>
+          <div class="job-role">Co-Founder / Technical Lead <span class="job-co">· AD Tech AI Inc.</span></div>
+          <div class="job-meta">Jan 2026 – Present · Toronto</div>
         </div>
         <ul>
-          <li>Leading migration of company-wide <b>authentication &amp; authorization</b> off hard-coded, table-managed roles onto <b>Microsoft Entra</b>, partnering with infrastructure to define app registrations, policies, and a safer employee SSO login with <b>MFA</b>.</li>
-          <li>Implemented <b>Auth0</b> in a production Bison application, modernizing its login and access flows.</li>
-          <li>Set up <b>Datadog</b> observability from scratch, monitoring queues, services, and integrations across the platform; standing up a <b>Gravitee</b> API gateway for traffic visibility and per-team API keys.</li>
-          <li>Rebuilt email infrastructure on <b>SendGrid</b>, moving off Microsoft Exchange for deliverability visibility and error handling.</li>
-          <li>Designed backend services for <b>high-volume integrations</b> (SQL Server, RabbitMQ, SQS, Azure Blob, SOAP/REST), including hardened <b>Track &amp; Trace</b> integrations with Highway: eligibility rules, carrier validation, status sync, retries, and safeguards.</li>
-          <li>Modernized legacy <b>PHP / Yii / Zend / Laravel</b> apps into smaller, testable services; built employee/user sync via Paycom, Workday, and RBAC, and advanced CI/CD with Docker, GitHub Actions, GHCR, and Portainer.</li>
+          <li>Architected <b>IRIS</b>, a multi-tenant AI support platform that autonomously handles e-commerce customer support, <b>resolving ~78% of conversations</b> without a human and escalating the rest.</li>
+          <li>Designed the system end to end: <b>Next.js + TypeScript</b> app, <b>Prisma/PostgreSQL</b> data layer, and <b>Python/FastAPI</b> AI services running an intent-detection → identity-verification → lookup → respond/escalate pipeline.</li>
+          <li>Built a <b>multi-tenant backend</b> serving a hosted support page and an embeddable widget from one codebase, each scoped to its business's data, with <b>OTP-gated</b> access to sensitive order data.</li>
+          <li>Built an owner dashboard and a natural-language analytics assistant over orders, conversations, and inventory.</li>
         </ul>
       </div>
 
@@ -193,12 +193,13 @@
     </section>
 
     <section class="r">
-      <h2 class="r-h">Selected Project</h2>
-      <div class="proj-row">
-        <div><b>IRIS, AI Employee for E-commerce Support</b> · AD Tech AI · <a href="https://adtechai.ca/iris" style="color:var(--accent);text-decoration:none">adtechai.ca/iris</a></div>
-        <div class="pd">A multi-tenant AI platform that autonomously runs e-commerce customer support 24/7 (order status, refunds, invoices, and OTP-verified lookups), resolving ~78% of conversations and escalating the rest, with a live owner dashboard. Deploys as a hosted page or embeddable widget. From $199/mo vs. $2.5k+ to hire.</div>
-        <div class="pt">Next.js · TypeScript · Prisma · PostgreSQL · Supabase · Python · FastAPI · OpenAI · Auth0 · Docker</div>
-      </div>
+      <h2 class="r-h">Selected Platform Work</h2>
+      <ul class="job" style="list-style:none">
+        <li style="position:relative;padding-left:1rem;margin-bottom:.28rem;font-size:.88rem;color:var(--soft)"><span style="position:absolute;left:0;color:var(--accent);font-weight:700">–</span> <b>Microsoft Entra SSO/MFA migration:</b> org-wide authentication modernization across logistics apps, replacing table-managed roles with RBAC-mapped app registrations.</li>
+        <li style="position:relative;padding-left:1rem;margin-bottom:.28rem;font-size:.88rem;color:var(--soft)"><span style="position:absolute;left:0;color:var(--accent);font-weight:700">–</span> <b>Highway Track &amp; Trace integration:</b> high-volume carrier status sync over SQL Server, RabbitMQ, and SQS with retries and operational safeguards.</li>
+        <li style="position:relative;padding-left:1rem;margin-bottom:.28rem;font-size:.88rem;color:var(--soft)"><span style="position:absolute;left:0;color:var(--accent);font-weight:700">–</span> <b>Datadog + Gravitee platform visibility:</b> observability and an API gateway built from scratch, giving the org failure visibility and per-team API keys.</li>
+        <li style="position:relative;padding-left:1rem;margin-bottom:.28rem;font-size:.88rem;color:var(--soft)"><span style="position:absolute;left:0;color:var(--accent);font-weight:700">–</span> <b>IRIS</b> (AD Tech AI): multi-tenant AI support platform, ~78% autonomous resolution · <a href="https://adtechai.ca/iris" style="color:var(--accent);text-decoration:none">adtechai.ca/iris</a></li>
+      </ul>
     </section>
 
     <section class="r">

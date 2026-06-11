@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dhruv Shah — Resume</title>
+  <meta name="description" content="Resume of Dhruv Shah, Senior Software Engineer in backend, platform, and AI systems." />
+  <link rel="icon" href="./assests/images/favicon-ds.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --ink:#15181c; --soft:#414853; --faint:#6b727c; --line:#dfe3e8;
+      --accent:#0f7a52; --accent-soft:#0f7a5215; --bg:#f3f4f6; --paper:#ffffff;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:"Inter",system-ui,sans-serif;background:var(--bg);color:var(--ink);
+      line-height:1.5;font-size:14px;-webkit-font-smoothing:antialiased;padding:2rem 1rem;}
+
+    /* floating controls (screen only) */
+    .toolbar{position:fixed;top:1rem;right:1rem;display:flex;gap:.6rem;z-index:10;}
+    .toolbar a,.toolbar button{font-family:inherit;font-size:.82rem;font-weight:600;cursor:pointer;
+      border:1px solid var(--line);background:var(--paper);color:var(--ink);
+      padding:.55rem .9rem;border-radius:8px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.06);
+      transition:all .15s ease;}
+    .toolbar .primary{background:var(--accent);color:#fff;border-color:var(--accent);}
+    .toolbar a:hover,.toolbar button:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(0,0,0,.12);}
+
+    /* page */
+    .page{max-width:820px;margin:0 auto;background:var(--paper);
+      padding:2.6rem 2.8rem;border-radius:6px;box-shadow:0 10px 40px rgba(0,0,0,.10);}
+
+    /* header */
+    header.r-head{border-bottom:2px solid var(--ink);padding-bottom:1rem;margin-bottom:1.3rem;}
+    .r-name{font-size:2.05rem;font-weight:700;letter-spacing:-.02em;line-height:1;}
+    .r-title{font-size:1rem;font-weight:600;color:var(--accent);margin-top:.3rem;}
+    .r-contact{margin-top:.75rem;display:flex;flex-wrap:wrap;gap:.4rem 1rem;
+      font-size:.83rem;color:var(--soft);}
+    .r-contact a{color:var(--soft);text-decoration:none;}
+    .r-contact a:hover{color:var(--accent);}
+    .r-contact span.sep{color:var(--line);}
+
+    section.r{margin-bottom:1.25rem;}
+    h2.r-h{font-size:.78rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+      color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:.3rem;margin-bottom:.7rem;}
+
+    .summary{color:var(--soft);font-size:.92rem;}
+
+    /* skills grid */
+    .skills{display:grid;grid-template-columns:auto 1fr;gap:.35rem 1rem;font-size:.86rem;}
+    .skills dt{font-weight:600;color:var(--ink);}
+    .skills dd{color:var(--soft);}
+
+    /* job */
+    .job{margin-bottom:1rem;}
+    .job:last-child{margin-bottom:0;}
+    .job-top{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;}
+    .job-role{font-weight:700;font-size:.97rem;}
+    .job-co{font-weight:600;color:var(--accent);}
+    .job-meta{font-size:.8rem;color:var(--faint);white-space:nowrap;font-weight:500;}
+    .job ul{list-style:none;margin-top:.35rem;}
+    .job li{position:relative;padding-left:1rem;margin-bottom:.22rem;font-size:.88rem;color:var(--soft);}
+    .job li::before{content:"–";position:absolute;left:0;color:var(--accent);font-weight:700;}
+    .job li b{color:var(--ink);font-weight:600;}
+
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+    .edu-row,.proj-row{display:flex;justify-content:space-between;gap:1rem;font-size:.88rem;}
+    .edu-row b,.proj-row b{font-weight:600;}
+    .proj-row{flex-direction:column;}
+    .proj-row .pd{color:var(--soft);font-size:.84rem;margin-top:.1rem;}
+    .proj-row .pt{color:var(--faint);font-size:.78rem;margin-top:.15rem;}
+
+    .note{font-size:.72rem;color:#b25; background:#fff4f6;border:1px solid #f3c9d2;
+      padding:.4rem .6rem;border-radius:6px;margin-bottom:1rem;}
+
+    @media print{
+      @page{size:Letter;margin:0;}
+      body{background:#fff;padding:0;font-size:11.4px;}
+      .toolbar,.note{display:none !important;}
+      .page{box-shadow:none;border-radius:0;max-width:none;margin:0;padding:.6in .7in;}
+      a{color:inherit;}
+      h2.r-h{color:#0f7a52;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+      .job-co,.r-title,.job li::before{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    }
+    @media (max-width:600px){
+      .page{padding:1.6rem 1.3rem;}
+      .skills,.two{grid-template-columns:1fr;}
+      .toolbar{position:static;justify-content:center;margin-bottom:1rem;}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <a href="./index.html">← Portfolio</a>
+    <button class="primary" onclick="window.print()">⤓ Download PDF</button>
+  </div>
+
+  <div class="page">
+    <header class="r-head">
+      <div class="r-name">Dhruv Shah</div>
+      <div class="r-title">Senior Software Engineer · Backend · Platform · AI</div>
+      <div class="r-contact">
+        <span>Toronto, Canada</span><span class="sep">|</span>
+        <a href="mailto:dhruvshah2997d@gmail.com">dhruvshah2997d@gmail.com</a><span class="sep">|</span>
+        <a href="https://www.linkedin.com/in/dhruvshah2912/">linkedin.com/in/dhruvshah2912</a><span class="sep">|</span>
+        <a href="https://github.com/Dhruv2997">github.com/Dhruv2997</a>
+      </div>
+    </header>
+
+    <section class="r">
+      <h2 class="r-h">Summary</h2>
+      <p class="summary">
+        Senior Software Engineer with <b>6+ years</b> building and modernizing production backend systems
+        across logistics, healthcare, and AI-powered SaaS. Deep experience in service architecture,
+        high-volume integrations (message queues, SOAP/REST, cloud storage), and reliability engineering.
+        Currently driving platform, authentication, and observability work at Bison Transport (Microsoft
+        Entra migration, Datadog, API gateway) while co-founding AD Tech AI, where I architect IRIS, a
+        multi-tenant AI support platform that autonomously resolves ~78% of e-commerce customer conversations.
+        Comfortable owning systems end to end, from data model to deployment.
+      </p>
+    </section>
+
+    <section class="r">
+      <h2 class="r-h">Core Skills</h2>
+      <dl class="skills">
+        <dt>Languages</dt><dd>PHP, TypeScript, JavaScript, Python, Java, SQL</dd>
+        <dt>Backend</dt><dd>Laravel, Yii, Zend, FastAPI, Django, Node.js, Spring</dd>
+        <dt>Frontend</dt><dd>Next.js, React, Redux, Angular, Vue.js</dd>
+        <dt>Data &amp; Queues</dt><dd>PostgreSQL, SQL Server, MySQL, Prisma, Supabase, RabbitMQ, SQS, MongoDB</dd>
+        <dt>Cloud &amp; DevOps</dt><dd>Docker, Azure, AWS, GitHub Actions, GHCR, Portainer, Datadog, Gravitee, SendGrid, Sentry</dd>
+        <dt>AI &amp; Auth</dt><dd>OpenAI / LLM workflows, RAG &amp; grounding, Auth0, Microsoft Entra SSO/MFA, OTP, RBAC</dd>
+      </dl>
+    </section>
+
+    <section class="r">
+      <h2 class="r-h">Experience</h2>
+
+      <div class="job">
+        <div class="job-top">
+          <div class="job-role">Co-Founder / Technical Lead <span class="job-co">· AD Tech AI Inc.</span></div>
+          <div class="job-meta">Jan 2026 – Present · Toronto</div>
+        </div>
+        <ul>
+          <li>Co-founded an AI SaaS startup and architected <b>IRIS</b>, an AI "employee" that autonomously handles e-commerce customer support, <b>resolving ~78% of conversations</b> without a human, 24/7.</li>
+          <li>Designed the system end to end: <b>Next.js + TypeScript</b> app, <b>Prisma/PostgreSQL</b> data layer, and <b>Python/FastAPI</b> AI services running an intent-detection → verification → lookup → respond/escalate pipeline.</li>
+          <li>Built a <b>multi-tenant backend</b> serving two entry points from one codebase, a hosted support page and an embeddable chat widget, each scoped to its business's data.</li>
+          <li>Shipped customer flows for order status, refunds, invoices, product availability, and new orders, gating sensitive data behind <b>OTP identity verification</b>.</li>
+          <li>Built an owner dashboard and a natural-language "ask your business" assistant surfacing orders, conversations, and low-stock alerts.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <div class="job-role">Senior Software Engineer <span class="job-co">· Bison Transport</span></div>
+          <div class="job-meta">Dec 2024 – Present · Toronto</div>
+        </div>
+        <ul>
+          <li>Leading migration of company-wide <b>authentication &amp; authorization</b> off hard-coded, table-managed roles onto <b>Microsoft Entra</b>, partnering with infrastructure to define app registrations, policies, and a safer employee SSO login with <b>MFA</b>.</li>
+          <li>Implemented <b>Auth0</b> in a production Bison application, modernizing its login and access flows.</li>
+          <li>Set up <b>Datadog</b> observability from scratch, monitoring queues, services, and integrations across the platform; standing up a <b>Gravitee</b> API gateway for traffic visibility and per-team API keys.</li>
+          <li>Rebuilt email infrastructure on <b>SendGrid</b>, moving off Microsoft Exchange for deliverability visibility and error handling.</li>
+          <li>Designed backend services for <b>high-volume integrations</b> (SQL Server, RabbitMQ, SQS, Azure Blob, SOAP/REST), including hardened <b>Track &amp; Trace</b> integrations with Highway: eligibility rules, carrier validation, status sync, retries, and safeguards.</li>
+          <li>Modernized legacy <b>PHP / Yii / Zend / Laravel</b> apps into smaller, testable services; built employee/user sync via Paycom, Workday, and RBAC, and advanced CI/CD with Docker, GitHub Actions, GHCR, and Portainer.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <div class="job-role">Full-Stack Developer <span class="job-co">· CareChain</span></div>
+          <div class="job-meta">Mar 2022 – Jul 2022</div>
+        </div>
+        <ul>
+          <li>Built modules for a <b>live healthcare product</b> using React, Django, and MySQL with reliable data storage and retrieval.</li>
+          <li>Used <b>Redux-Saga</b> to manage asynchronous flows, improving responsiveness and stability.</li>
+          <li>Architected and integrated <b>Django REST APIs</b> for clean frontend↔backend communication.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <div class="job-role">Full-Stack Developer <span class="job-co">· Yantre Venture</span></div>
+          <div class="job-meta">Sep 2019 – Nov 2020</div>
+        </div>
+        <ul>
+          <li>Delivered across the full SDLC in an agile/SCRUM environment tracked in JIRA, contributing to multiple client projects.</li>
+          <li>Built dynamic, cross-browser UIs with <b>Angular 11, TypeScript, Angular Material, and Vue.js</b>.</li>
+          <li>Developed REST controllers with <b>Spring Data REST</b> and a JPA/Hibernate data layer over Oracle DB.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="r">
+      <h2 class="r-h">Selected Project</h2>
+      <div class="proj-row">
+        <div><b>IRIS, AI Employee for E-commerce Support</b> · AD Tech AI · <a href="https://adtechai.ca/iris" style="color:var(--accent);text-decoration:none">adtechai.ca/iris</a></div>
+        <div class="pd">A multi-tenant AI platform that autonomously runs e-commerce customer support 24/7 (order status, refunds, invoices, and OTP-verified lookups), resolving ~78% of conversations and escalating the rest, with a live owner dashboard. Deploys as a hosted page or embeddable widget. From $199/mo vs. $2.5k+ to hire.</div>
+        <div class="pt">Next.js · TypeScript · Prisma · PostgreSQL · Supabase · Python · FastAPI · OpenAI · Auth0 · Docker</div>
+      </div>
+    </section>
+
+    <section class="r">
+      <h2 class="r-h">Education</h2>
+      <div class="edu-row">
+        <div><b>B.E., Computer Engineering</b>, ITM (SLS) Baroda University</div>
+        <div class="job-meta">2015 – 2019</div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Allow ?print=1 to auto-open the print dialog
+    if (new URLSearchParams(location.search).get("print") === "1") {
+      window.addEventListener("load", () => setTimeout(() => window.print(), 400));
+    }
+  </script>
+</body>
+</html>
